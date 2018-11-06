@@ -6,8 +6,10 @@
     </div>
     <div class="article__bottom">
       <div class="index-title">
-        <h5><%= blog.title %></h5>
-        <p>Written by : <%= blog.user.nickname %></p>
+        <h5><a href="/blogs/<%= blog.id %>"><%= blog.title %></a></h5>
+        <p>
+          <a href="/users/<%= blog.user.id %>">Written by : <%= blog.user.nickname %></a>
+        </p>
       </div>
     </div>
   </div>

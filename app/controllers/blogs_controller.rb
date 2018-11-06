@@ -14,6 +14,7 @@ before_action :redirect_to, except: :index
     Blog.create(blog_params)
   end
 
+
   private
   def blog_params
     params.require(:blog).permit(:title, :text, :image)

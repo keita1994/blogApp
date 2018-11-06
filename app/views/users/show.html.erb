@@ -1,0 +1,13 @@
+ <% @blogs.each do |blog| %>
+  <div class="article">
+    <div class="article__top">
+      <img src="https://imgsv.imaging.nikon.com/lineup/dslr/d600/img/sample01/img_01_l.jpg" width="600px" height="312px">
+    </div>
+    <div class="article__bottom">
+      <div class="index-title">
+        <h5><%= blog.title %></h5>
+        <p>Written by : <%= @nickname %></p>
+      </div>
+    </div>
+  </div>
+<% end %>

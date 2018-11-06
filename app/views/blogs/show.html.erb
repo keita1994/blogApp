@@ -1,0 +1,10 @@
+<div class="show-box">
+  <div class="show-head">
+    <h1><%= @blog.title %></h1>
+    <h4><%= @blog.user.nickname %></h6>
+  </div>
+  <div class="show-main">
+    <img class="show-image" src="<%= @blog.image %>">
+    <div class='show-text'><%= @blog.text %></div>
+  </div>
+</div>

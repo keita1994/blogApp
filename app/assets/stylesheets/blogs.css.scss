@@ -9,6 +9,10 @@ body {
   background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
 }
 
+.brand-logo {
+  margin-left: 100px;
+}
+
 .article {
   width: 600px;
   min-height: 350px;
@@ -149,4 +153,12 @@ body {
     margin: 10px 0;
     background-color: #330099;
   }
+}
+
+// pagination
+.pagination {
+  text-align: center;
+  background: -webkit-repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+  background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+  color: #A4C6FF;
 }

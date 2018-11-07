@@ -1,13 +1,12 @@
-<h4>ブログ記事の投稿欄</h2>
-
-<%= form_for(@blog) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title, placeholder: '記事のタイトル' %>
-
-  <%= f.label :text %>
-  <%= f.text_area :text, placeholder: '記事の内容' %>
-
-  <%= f.submit "submit" %>
-
-<% end %>
+<div class="form-new-box">
+  <div class="form-new-box-top"><h3>記事の投稿</h3></div>
+  <div class="form-new-box-bottom">
+  <%= form_for(@blog) do |f| %>
+    <%= f.text_field :title, placeholder: '記事のタイトル', style: 'width:800px;' %>
+    <%= f.text_field :image, placeholder: 'イメージ画像', style: 'width:800px;' %>
+    <%= f.text_area :text, placeholder: '記事の内容', style: 'width:800px;min-height:450px;'%><br/>
+    <%= f.submit "submit" %>
+  <% end %>
+ </div>
+</div>
 

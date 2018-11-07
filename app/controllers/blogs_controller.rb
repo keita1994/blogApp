@@ -18,9 +18,18 @@ before_action :move_to_index, except: [:index, :show]
     @blog = Blog.find(params[:id])
   end
 
+  def edit
+    @blog = Blog.find(params[:id])
+  end
+
+  def update
+    blog = Blog.find(params[:id])
+    blog.update(blog_params)
+  end
+
   private
   def blog_params
-    params.require(:blog).permit(:title, :text, :image)
+    params.require(:blog).permit(:title, :text, :image).merge(user_id: current_user.id)
   end
 
   def move_to_index

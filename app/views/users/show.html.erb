@@ -1,12 +1,21 @@
  <% @blogs.each do |blog| %>
   <div class="article">
     <div class="article__top">
-      <img src="https://imgsv.imaging.nikon.com/lineup/dslr/d600/img/sample01/img_01_l.jpg" width="600px" height="312px">
+      <img src="<%= blog.image %>" width="600px" height="312px">
     </div>
     <div class="article__bottom">
       <div class="index-title">
         <h5><a href="/blogs/<%= blog.id %>"><%= blog.title %></a></h5>
-        <p>Written by : <%= @nickname %></p>
+        <p>
+          <a href="/users/<%= blog.user.id %>">投稿者：<%= blog.user.nickname %></a>
+        </p>
+        <ul class="bolgs-controllr-links">
+          <% if user_signed_in? && current_user.id == blog.user_id %>
+          <li>削除</li>
+          <li><%= link_to '編集', "/blogs/#{blog.id}/edit", method: :get %></li>
+          <li><%= link_to '詳細', "/blogs/#{blog.id}"%></li>
+          <% end %>
+        </ul>
       </div>
     </div>
   </div>

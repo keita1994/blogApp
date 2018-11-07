@@ -12,7 +12,7 @@
         </p>
         <ul class="bolgs-controllr-links">
           <% if user_signed_in? && current_user.id == blog.user_id %>
-          <li>削除</li>
+          <li><%= link_to '削除', "/blogs/#{blog.id}", method: :delete %></li>
           <li><%= link_to '編集', "/blogs/#{blog.id}/edit", method: :get %></li>
           <% end %>
           <li><%= link_to '詳細', "/blogs/#{blog.id}"%></li>

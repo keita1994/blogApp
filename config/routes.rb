@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   get  "blogs/:id"   =>  "blogs#show"
   patch "blogs/:id"  =>  "blog#update"
   get "blogs/:id/edit"  =>  "blogs#edit"
+  delete "blogs/:id"  =>  "blogs#destroy"
   get  "users/:id"    =>  "users#show"
 end

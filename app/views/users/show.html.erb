@@ -1,3 +1,4 @@
+ <div class="my-page"><h4><%= @nickname %>さんの投稿一覧</h4></div>
  <% @blogs.each do |blog| %>
   <div class="article">
     <div class="article__top">
@@ -11,7 +12,7 @@
         </p>
         <ul class="bolgs-controllr-links">
           <% if user_signed_in? && current_user.id == blog.user_id %>
-          <li>削除</li>
+          <li><%= link_to '削除', "/blogs/#{blog.id}", method: :delete %></li>
           <li><%= link_to '編集', "/blogs/#{blog.id}/edit", method: :get %></li>
           <li><%= link_to '詳細', "/blogs/#{blog.id}"%></li>
           <% end %>
@@ -19,4 +20,4 @@
       </div>
     </div>
   </div>
-<% end %>
+  <% end %>

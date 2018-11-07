@@ -57,6 +57,20 @@ body {
 
 
 // blog/show.css
+.my-page {
+  width: 800px;
+  padding: 8px 19px;
+  color: #000055;
+  background: whitesmoke;
+  border-top: solid 5px #5989cf;
+  border-bottom: solid 5px #5989cf;
+  margin: 30px auto 15px;
+  text-align: center;
+  h4{
+    font-weight: bold;
+  }
+ }
+
 .show-box {
   border: double 5px navy;
   min-height: 100vh;

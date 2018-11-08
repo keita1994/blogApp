@@ -1,0 +1,11 @@
+<div class="form-new-box">
+  <div class="form-new-box-top"><h3>記事の編集</h3></div>
+  <div class="form-new-box-bottom">
+  <%= form_for @blog, :url => {:action => 'update' } do |f| %>
+    <%= f.text_field :title, placeholder: '記事のタイトル', style: 'width:800px;' %>
+    <%= f.text_field :image, placeholder: 'イメージ画像', style: 'width:800px;' %>
+    <%= f.text_area :text, placeholder: '記事の内容', style: 'width:800px;min-height:450px;'%><br/>
+    <%= f.submit "submit" %>
+  <% end %>
+ </div>
+</div>

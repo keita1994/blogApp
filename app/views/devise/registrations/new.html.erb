@@ -25,6 +25,16 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
+  <h6>Your favorite class ?</h6>
+  <div class="field">
+    <% %w(gryffinfor slytherin hufflepuff ravenclaw).each.with_index do |sort,i| %>
+    <label>
+      <%= f.check_box  :sort, {multiple: true}, sort, nil %>
+      <%= f.label sort %>
+    </label>
+    <% end %>
+  </div>
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>

@@ -1,7 +1,26 @@
  <div class="my-page"><h4><%= @nickname %>さんの投稿一覧</h4></div>
  <% @blogs.each do |blog| %>
 
-  <%= render partial: "blogs/blog", locals: {blog: blog} %>
+  <div class="article">
+    <div class="article__top">
+      <img src="<%= blog.image %>" width="600px" height="312px">
+    </div>
+    <div class="article__bottom">
+      <div class="index-title">
+        <h5><a href="/blogs/<%= blog.id %>"><%= blog.title %></a></h5>
+        <p>
+          <a href="/users/<%= blog.user.id %>">投稿者：<%= blog.user.nickname %></a>
+        </p>
+        <ul class="bolgs-controllr-links">
+          <% if user_signed_in? && current_user.id == blog.user_id %>
+          <li><%= link_to '削除', "/blogs/#{blog.id}", method: :delete %></li>
+          <li><%= link_to '編集', "/blogs/#{blog.id}/edit", method: :get %></li>
+          <% end %>
+          <li><%= link_to '詳細', "/blogs/#{blog.id}"%></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
 <% end %>
 <%= paginate(@blogs) %>

@@ -1,0 +1,29 @@
+.form-new-box{
+  min-height: 700px;
+  width: 1000px;
+  background-color: red;
+  margin: 30px auto;
+  background: #f1f1f1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+
+  .form-new-box-top {
+    min-height: 100px;
+    width: 1000px;
+    background: #330099;
+    padding: 4px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+  }
+
+  .form-new-box-bottom{
+    min-height: 650px;
+    margin: 40px 0 50px 100px;
+  }
+}
+
+.image-box {
+  height: 312px;
+  width: 600px;
+}

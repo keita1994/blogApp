@@ -1,0 +1,64 @@
+// blog/show.css
+.my-page {
+  width: 800px;
+  padding: 8px 19px;
+  color: #000055;
+  background: whitesmoke;
+  border-top: solid 5px #5989cf;
+  border-bottom: solid 5px #5989cf;
+  margin: 30px auto 15px;
+  text-align: center;
+  h4{
+    font-weight: bold;
+  }
+ }
+
+.show-box {
+  border: double 5px navy;
+  min-height: 100vh;
+  width: 900px;
+  margin: 30px auto 30px;
+  padding: 0px 30px 20px;
+  background-color: whitesmoke;
+  word-break: normal;
+
+  .show-head {
+    background-color: #330099;
+    min-height: 100px;
+    width:800px;
+    margin: 5px auto;
+    color: white;
+    padding: 1px;
+
+    h2 {
+      text-align: center;
+    }
+    h4 {
+      text-align: right;
+      margin: 20px;
+
+    }
+  }
+  .show-main {
+    margin-top: 40px;
+    min-height: 500px;
+    margin-bottom: 20px;
+
+    .show-image {
+      float: left;
+      margin-top: 30px;
+      height: 300px;
+      width: 400px;
+
+    }
+    .show-text {
+      float: right;
+      min-height: 450px;
+      width: 400px;
+      font-size: 20px;
+      p{
+        width: 400px;
+      }
+    }
+  }
+}

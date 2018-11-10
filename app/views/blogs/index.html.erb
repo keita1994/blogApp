@@ -1,3 +1,5 @@
+<%= render partial: "application" %>
+
 <% @blogs.each do |blog| %>
 
   <%= render partial: "blog", locals: {blog: blog} %>
@@ -5,3 +7,5 @@
 <% end %>
 <%= paginate(@blogs) %>
 
+</body>
+</html>

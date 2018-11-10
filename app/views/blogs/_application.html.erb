@@ -1,0 +1,37 @@
+<% if user_signed_in? && current_user.sort == "gryffindor" %>
+<body class="gryffindor">
+  <header>
+    <nav class="red darken-4">
+<% elsif user_signed_in? && current_user.sort == "slytherin" %>
+<body class="slytherin">
+  <header>
+    <nav class="teal darken-4">
+<% elsif user_signed_in? && current_user.sort == "hufflepuff" %>
+<body class="hufflepuff">
+  <header>
+    <nav class="yellow darken-2">
+<% elsif user_signed_in? && current_user.sort == "ravenclaw" %>
+<body class="ravenclaw">
+  <header>
+    <nav class="light-blue darken-4">
+<% elsif %>
+<body class="muggle">
+  <header>
+    <nav class="grey darken-4">
+<% end %>
+
+      <div class="nav-wrapper">
+        <a href="/" class="brand-logo">BLOG</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <% if user_signed_in? %>
+          <li><%= link_to 'サインアウト', "/users/sign_out", method: :delete%></li>
+          <li><a href="/users/<%= current_user.id %>">マイページ</a></li>
+          <li><a href="/blogs/new">投稿</a></li>
+        <% else %>
+          <li><%= link_to 'ログイン', new_user_session_path, class: 'post' %></li>
+          <li><%= link_to '新規登録', new_user_registration_path, class: 'post' %></li>
+        <% end %>
+        </ul>
+      </div>
+   </nav>
+  </header>

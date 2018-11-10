@@ -1,7 +1,26 @@
-body {
-  background: -webkit-repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
-  background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+
+.gryffindor {
+  background: -webkit-repeating-linear-gradient(-45deg, #FFC0CB, #FFC0CB 3px,#e9f4ff 3px, #e9f4ff 7px);
+  background: repeating-linear-gradient(-45deg, #FFC0CB, #FFC0CB 3px,#e9f4ff 3px, #e9f4ff 7px);
 }
+
+.slytherin {
+  background: -webkit-repeating-linear-gradient(-45deg, #99CC99, #99CC99 3px,#e9f4ff 3px, #e9f4ff 7px);
+  background: repeating-linear-gradient(-45deg, #99CC99, #99CC99 3px,#e9f4ff 3px, #e9f4ff 7px);
+}
+
+.hufflepuff {
+  background: -webkit-repeating-linear-gradient(-45deg,   #FFFFAA,  #FFFFAA 3px, #DDDDDD 3px, #DDDDDD 7px);
+  background: repeating-linear-gradient(-45deg,   #FFFFAA,  #FFFFAA 3px, #DDDDDD 3px, #DDDDDD 7px);
+}
+
+.ravenclaw {
+  background: -webkit-repeating-linear-gradient(-45deg, #BAD3FF, #BAD3FF 3px,#e9f4ff 3px, #e9f4ff 7px);
+  background: repeating-linear-gradient(-45deg, #BAD3FF, #BAD3FF 3px,#e9f4ff 3px, #e9f4ff 7px);
+}
+
+
+
 
 .brand-logo {
   margin-left: 100px;
